@@ -60,6 +60,7 @@ module.exports = function (classes){
 
         // Then we build some basic headers.
         headers['Host'] = this.host;
+        headers['Content-Type'] = 'application/json-rpc';
         headers['Content-Length'] = Buffer.byteLength(requestJSON, 'utf8');
 
         // Now we'll make a request to the server
